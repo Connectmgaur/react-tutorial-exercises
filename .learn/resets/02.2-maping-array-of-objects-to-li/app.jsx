@@ -8,14 +8,9 @@ const planets = ["Mars", "Venus", "Jupiter", "Earth", "Saturn", "Neptune"];
  * planets in html called planetsInHTML
  */
 
+
+
 // 2) add the array planetsInHTML inside the innerHTML of this ul
+const content = (<ul className="list-group m-5"></ul>);
 
-const planetList = planets.map((planet, index) => (
-	<li key={index} className="list-group-item">
-		{planet}
-	</li>
-));
-
-const content = <ul className="list-group m-5">{planetList}</ul>;
-
-ReactDOM.render(content, document.getElementById("myDiv"));
+ReactDOM.render(content, document.querySelector("#myDiv"));
