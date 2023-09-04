@@ -2,13 +2,19 @@ import React from "react";
 import ReactDOM from "react-dom";
 import PropTypes from "prop-types";
 
-const clickHandler = e => {
-	console.log("I was clicked!", e);
+const Alert = () => {
+	const handleClick = () => {
+		window.alert("I was clicked!");
+	};
+
+	return (
+		<button className="btn btn-success btn-lg" onClick={handleClick}>
+			Click me
+		</button>
+	);
 };
 
-const Alert = props => {
-	return <button className="btn btn-success btn-lg">Click Me</button>;
-};
+export default Alert;
 
 // here is where the alert component is being used, you don't have to edit this part,
 // but it helps you understand what properties is the component using
